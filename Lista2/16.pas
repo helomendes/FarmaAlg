@@ -1,18 +1,17 @@
 program fibonacci;
 var
-        n, ultimo, penultimo, soma, i, atual : integer;
+        n, ultimo, penultimo, soma, i : integer;
 begin
         read(n);
         ultimo := 1;
         penultimo := 0;
-        i := 3;
-        soma := 1;
+	i := 2;
+        soma := 0;
         while i <= n do
                 begin
-                        atual := ultimo + penultimo;
-                        soma := soma + atual;
+                        soma := penultimo + ultimo;
                         penultimo := ultimo;
-                        ultimo := atual;
+                        ultimo := soma;
                         i := i + 1;
                 end;
         writeln(soma);
